@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AITU Birthday Party Detective</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- jQuery: load it BEFORE task1.js -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="task1.js" defer></script>
+</head>
+<body>
+  <header class="page-header">
+    <div class="eyebrow">AITU • THE BIRTHDAY MYSTERY</div>
+    <h1>Who took the cake?</h1>
+    <p>The party started at 19:30. The cake disappeared from the kitchen at 21:30. Find the culprit!</p>
+  </header>
+
+  <main>
+    <section class="house-section">
+      <div class="house-roof"><span>THE PARTY · 19:30–22:30</span></div>
+      <div id="party-house" class="house">
+        <div id="floor-2" class="floor">
+          <div class="floor-label">FLOOR 2</div>
+          <div class="rooms upstairs"></div>
+        </div>
+        <div id="floor-1" class="floor">
+          <div class="floor-label">FLOOR 1</div>
+          <div class="rooms downstairs"></div>
+        </div>
+      </div>
+      <div class="house-base"></div>
+    </section>
+
+    <section class="legend">
+      <strong>LEGEND</strong>
+      <span><i class="dot red"></i><i class="dot blue"></i><i class="dot green"></i><i class="dot black"></i><i class="dot yellow"></i><i class="dot purple"></i> Clothing color</span>
+      <span>📱 Phone</span><span>👓 Glasses</span><span>👜 Bag</span><span>☕ Cup</span><span>🍰 Cake crumbs</span><span>🎓 AITU student</span>
+    </section>
+
+    <section class="detective">
+      <div class="section-heading">
+        <div><div class="eyebrow">SELECTOR DETECTIVE</div><h2>Investigate the cases</h2></div>
+        <button id="reset-button" class="reset-button">Reset party</button>
+      </div>
+      <p class="hint">Choose a case. The page is rebuilt before each investigation, and the matching guests or rooms will jump.</p>
+      <div id="case-buttons" class="case-buttons"></div>
+      <div id="result" class="result" aria-live="polite">Choose a case to see the result here.</div>
+    </section>
+  </main>
+  <footer>Made for Assignment #6 · jQuery selectors, traversal & effects</footer>
+</body>
+</html>
